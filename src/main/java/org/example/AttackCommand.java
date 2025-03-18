@@ -7,8 +7,11 @@ public class AttackCommand implements Action{
         p1 = _p1;
         p2 = _p2;
     }
-    @Override
+
     public void act() {
         Pokemon.attack(p1, p2);
+    }
+    public void undo(){
+        Pokemon.cancelAttack(p1, p2);
     }
 }

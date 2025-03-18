@@ -21,12 +21,20 @@ public class Main {
         SimpleGame game = new SimpleGame();
         AttackCommand firstAttack = new AttackCommand(team1.member1, team2.member2);
         AttackCommand secondAttack = new AttackCommand(team2.member1, team1.member2);
+        CancelAttackCommand cancelFirstAttack = new CancelAttackCommand(team1.member1, team2.member2);
 
         game.setAction(firstAttack);
         game.doAction();
 
+        game.setAction(cancelFirstAttack);
+        game.doAction();
+
         game.setAction(secondAttack);
         game.doAction();
+
+        game.undoAction();
+        game.undoAction();
+        game.undoAction();
 
     }
 }

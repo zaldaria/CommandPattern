@@ -17,11 +17,11 @@ public class Pokemon{
     public static void attack(Pokemon attacker, Pokemon defender){
         defender.health -= attacker.attack;
         System.out.println("\nPokemon " + attacker.name + " attacked " + defender.name + " successfully!");
-        System.out.println(defender.name + " health level decreased to " + defender.health);
+        System.out.println(defender.name + " health points decreased to " + defender.health);
     }
     public static void cancelAttack(Pokemon attacker, Pokemon defender){
         defender.health += attacker.attack;
-        System.out.println("\nHealth points returned to " + defender.name);
+        System.out.println("\n" + defender.name + "'s health points restored to " + defender.health);
     }
     public String toString() {
         return "\nPokemon:\nName -- " + name + "\nType -- " + type + "\nHealth -- " + health + "\nDefense -- " + defense + "\nAttack -- " + attack;
