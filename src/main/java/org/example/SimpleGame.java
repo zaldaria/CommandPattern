@@ -16,6 +16,10 @@ public class SimpleGame{
         actions.push(step);
     }
     public void undoAction(){
-        actions.pop().undo();
+        if (!actions.empty()) {
+            actions.pop().undo();
+        }
+        else
+            System.out.println("There no actions to cancel!");
     }
 }
